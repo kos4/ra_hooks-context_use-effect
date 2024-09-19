@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import Details from "./Details";
+import User from "./User";
 
 export default function List() {
   const [users, setUsers] = useState([]);
@@ -48,12 +49,5 @@ export default function List() {
       <div className="user"></div>
       <Details info={user}/>
     </>
-  );
-}
-
-function User({item, click}) {
-  const className = `users__item ${item.active}`;
-  return (
-    <div className={className} onClick={click} id={item.id}>{item.name}</div>
   );
 }

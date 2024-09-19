@@ -28,9 +28,12 @@ export default function Details({info}) {
 
   if (data) {
     console.log(loading);
+
+    const src = `${data.avatar}?u=${data.id}`;
+
     return (
       <div className="user">
-        <img src={data.avatar} alt={data.name} className="user__photo"/>
+        <img src={src} alt={data.name} className="user__photo"/>
         <div className="user__name">{data.name}</div>
         <div className="user__city">{data.details.city}</div>
         <div className="user__company">{data.details.company}</div>
